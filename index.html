@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/app.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:200,200i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="./public/styles/global.css">
+
+  <title>WOD List</title>
+
+</head>
+
+
+<body>
+  <header id="header">
+      <h1 id="title">WOD List</h1>
+      <h2 id="subtitle">List your WODs</h2>
+  </header>
+
+  <main id='main'></main>
+
+  <form id="input-form">
+
+    <label> Name:
+      <input type="text" name='name'>
+    </label>
+
+    <fieldset>
+      <legend>Type: </legend>
+      <label> Girl
+        <input type="radio" name="type" value="Girl">
+      </label>
+      <label> Hero
+        <input type="radio" name="type" value="Hero">
+      </label>
+      <label> Games
+        <input type="radio" name="type" value="Games">
+      </label>
+      <label> Bnechmark
+        <input type="radio" name="type" value="Benchmark">
+      </label>
+      <label> Custom
+        <input type="radio" name="type" value="Custom">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Scoring: </legend>
+      <label> For Time
+        <input type="radio" name="scoring" value="For Time">
+      </label>
+      <label> Rounds for Time
+        <input type="radio" name="scoring" value="Rounds for Time">
+      </label>
+      <label> Other
+        <input type="radio" name="scoring" value="Other">
+      </label>
+      <label> Not Applicable
+        <input type="radio" name="scoring" value="Not Applicable">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Emphasis: </legend>
+      <label> Aerobic
+        <input type="radio" name="emphasis" value="Aerobic">
+      </label>
+      <label> Strength
+        <input type="radio" name="emphasis" value=Strenght>
+      </label>
+      <label> Gymnastics
+        <input type="radio" name="emphasis" value="value3">
+      </label>
+      <label> Anaerobic
+        <input type="radio" name="emphasis" value="value4">
+      </label>
+    </fieldset>
+
+
+    <label> Exercises
+      <br>
+    <textarea name="exercises" rows="8" cols="80"></textarea>
+    </label>
+    <br>
+
+    <label> Rx
+    <br>
+    <textarea name="rX" rows="8" cols="80"></textarea>
+    </label>
+
+    <fieldset>
+      <legend>Equipment: </legend>
+      <label>value1
+        <input type="checkbox" name="equipment[]" value="value1">
+      </label>
+      <label>value2
+        <input type="checkbox" name="equipment[]" value="value2">
+      </label>
+      <label> value3
+        <input type="checkbox" name="equipment[]" value="value3">
+      </label>
+      <label> value4
+        <input type="checkbox" name="equipment[]" value="value4">
+      </label>
+      <label> value5
+        <input type="checkbox" name="equipment[]" value="value5">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend> Score: </legend>
+          <input type="date" name='score_date'>
+          <input type="text" name='score_score'>
+    </fieldset>
+
+    <label for="">Goal:
+      <input type="text" name="goal">
+    </label>
+    <br>
+
+    <label> Minimum Time:
+      <input type="time" name='min_time' step='1'>
+    </label>
+
+    <label>Maximum Time:
+      <input type="time" name='max_time' step='1'>
+    </label>
+    <br>
+
+    <input id='submit' type="submit" value="Add WOD">
+
+  </form>
+
+  <br>
+  <footer id='footer'>
+    <small>&copy; 2018 WOD List</small>
+  </footer>
+
+</body>
+</html>
