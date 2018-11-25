@@ -42,9 +42,9 @@
 
     <form id="input-form">
 
-      <label> Name:
+      <fieldset> Name:
         <input type="text" name='name'>
-      </label>
+      </fieldset>
 
       <fieldset>
         <legend>Type: </legend>
@@ -97,33 +97,32 @@
         </label>
       </fieldset>
 
+      <fieldset>
+      <legend>Exercises</legend>
+        <textarea name="exercises" rows="8" cols="80"></textarea>
+      </fieldset>
 
-      <label> Exercises
-        <br>
-      <textarea name="exercises" rows="8" cols="80"></textarea>
-      </label>
-      <br>
 
-      <label> Rx
-      <br>
-      <textarea name="rX" rows="8" cols="80"></textarea>
-      </label>
+      <fieldset>
+      <legend>Rx </legend>
+        <textarea name="rX" rows="8" cols="80"></textarea>
+      </fieldset>
 
       <fieldset>
         <legend>Equipment: </legend>
-        <label>value1
+        <label>Barbell
           <input type="checkbox" name="equipment[]" value="Barbell">
         </label>
-        <label>value2
+        <label>Pull-up Bar
           <input type="checkbox" name="equipment[]" value="Pull-up">
         </label>
-        <label> value3
+        <label> Rings
           <input type="checkbox" name="equipment[]" value="Rings">
         </label>
-        <label> value4
+        <label> Kettlebell
           <input type="checkbox" name="equipment[]" value="Kettlebell">
         </label>
-        <label> value5
+        <label> Medball
           <input type="checkbox" name="equipment[]" value="Medball">
         </label>
       </fieldset>
@@ -134,21 +133,28 @@
             <input type="text" name='score_score'>
       </fieldset>
 
-      <label for="">Goal:
+      <fieldset>
+      <legend>Goal: </legend>
         <input type="text" name="goal">
-      </label>
+      </fieldset>
       <br>
 
-      <label> Minimum Time:
-        <input type="time" name='min_time' step='1'>
-      </label>
+      <fieldset>
+      <legend>Times </legend>
+        <label> Minimum Time
+          <input type="time" name='min_time' step='1'>
+        </label>
 
-      <label>Maximum Time:
-        <input type="time" name='max_time' step='1'>
-      </label>
-      <br>
+        <label> Maximum Time
+          <input type="time" name='max_time' step='1'>
+        </label>
+      </fieldset>
 
-      <input id='submit' type="submit" value="Add WOD">
+      <fieldset>
+      <legend> Add </legend>
+        <input id='submit' type="submit" value="Add WOD">
+        <button id='addMore'> Add more... </button>
+      </fieldset>
 
     </form>
   </dialog>

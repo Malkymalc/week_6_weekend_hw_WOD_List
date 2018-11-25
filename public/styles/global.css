@@ -116,15 +116,15 @@ dialog {
 
 dialog::backdrop {
   /* make the backdrop a semi-transparent black */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 
 #input-form {
-  background-color: hsla(360, 0%, 50%, 0.8);
+  background-color: hsla(360, 0%, 100%, 0.8);
   margin: 0;
   padding: 1vw;
-  border: 3px dotted white;
+  /* border: 3px dotted white; */
   border-radius: 10px;
 }
 
