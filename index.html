@@ -32,6 +32,23 @@
   </header>
 
   <main id='main'>
+    <section class="wod-tile">
+      <h3>Fran</h3>
+      <ul class="tile-list">
+        <li>Type: Girl</li>
+        <li>Scoring: For Time</li>
+        <li>Emphasis: Anaerobic</li>
+        <li>Exercises:
+          <p>21-15-9 Pull-ups and Thrusters</p>
+        </li>
+        <li>Rx: 55kg Men, 35kg Women</li>
+        <li>Equipment: Pull-up Bar, Barbell</li>
+        <li>Scores: 2018-11-14: 00:08:15 </li>
+        <li>Goal: < 00:03:00 </li>
+        <li>Min Time 00:02:00 </li>
+        <li>Max Time 00:10:00</li>
+      </ul>
+    </section>
   </main>
 
   <footer id='footer'>
@@ -46,23 +63,23 @@
         <input type="text" name='name'>
       </fieldset>
 
-      <fieldset>
+      <fieldset class='radio-group'>
         <legend>Type: </legend>
-        <label> Girl
-          <input type="radio" name="type" value="Girl">
-        </label>
-        <label> Hero
-          <input type="radio" name="type" value="Hero">
-        </label>
-        <label> Games
-          <input type="radio" name="type" value="Games">
-        </label>
-        <label> Bnechmark
-          <input type="radio" name="type" value="Benchmark">
-        </label>
-        <label> Custom
-          <input type="radio" name="type" value="Custom">
-        </label>
+
+          <input id='girl' type="radio" name="type" value="Girl">
+          <label for='girl'>Girl</label>
+
+          <input id='hero' type="radio" name="type" value="Hero">
+          <label for='hero'>Hero</label>
+
+          <input id='games' type="radio" name="type" value="Games">
+          <label for='games'>Games</label>
+
+          <input id='bench' type="radio" name="type" value="Benchmark">
+          <label for='bench'> Benchmark</label>
+
+          <input id='custom' type="radio" name="type" value="Custom">
+          <label for='custom'>Custom</label>
       </fieldset>
 
       <fieldset>

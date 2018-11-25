@@ -50,7 +50,7 @@ h2 {
 }
 
 
-ul {
+header ul {
   margin: 0;
   padding-top: 1vw;
   padding-left: 1vw;
@@ -104,11 +104,15 @@ header a:hover {
   font-weight: lighter;
   text-shadow: 0 0 0.5px white;
   background-image: linear-gradient( hsla(360, 100%, 0%, 0.5), hsla(360, 100%, 0%, 1) );
+  position: fixed;
+  width: 100%;
 }
 
 
 dialog {
   padding: 0;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
   border: 0;
   border-radius: 0.6rem;
   box-shadow: 0 0 1em black;
@@ -125,7 +129,7 @@ dialog::backdrop {
   margin: 0;
   padding: 1vw;
   /* border: 3px dotted white; */
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 #submit {
@@ -134,18 +138,62 @@ dialog::backdrop {
 
 .wod-tile {
   display: flex;
-  font-size: 20px;
-  height: 300px;
-  width: 200px;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  height: 350px;
+  width: 250px;
   background-color: hsla(360, 0%, 50%, 0.8);
-  border: 3px dotted white;
+  border: 1px dashed white;
   color: white;
-  border-radius: 10px;
+  border-radius: 3px;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
   overflow: hidden;
 }
 
 .tile-list {
   list-style-image: none;
+}
+
+
+.radio-group {
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.radio-group input {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.radio-group label {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.radio-group label:first-of-type {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.radio-group label:last-of-type {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin-left: -3px;
+}
+
+.radio-group label:hover {
+  background-color: green;
+}
+
+.radio-group input:checked + label{
+  background: red;
 }
