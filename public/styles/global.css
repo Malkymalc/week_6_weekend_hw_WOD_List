@@ -2,7 +2,7 @@ body {
   background-image: url('../images/crossfit-background1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   font-family: 'Open Sans', sans-serif;
   color: white;
   margin: 0;
@@ -30,7 +30,7 @@ h1 {
   text-shadow: 0 0 1px white;
 
 }
-h2, footer {
+h2 {
   font-size: 18px;
   font-weight: lighter;
   margin-left: 10px;
@@ -41,17 +41,95 @@ h2, footer {
 #header {
   margin: 0px;
   padding: 5px;
-  height: auto;
+  height: 10vh;
   position: sticky;
   top: 0px;
   background-image: linear-gradient(hsla(360, 100%, 0%, 1), hsla(360, 100%, 0%, 0.80));
+  display: grid;
+  grid-template-columns: 1fr  2fr;
 }
+
+
+ul {
+  margin: 0;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  list-style: none;
+}
+li {
+  margin: 0.5vw;
+}
+header li {
+  display: inline-block;
+  margin: 1vw;
+  padding: 0.5vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0.2px 0.2px 0.2px lightgrey;
+}
+
+header a:hover {
+  color: white;
+  text-shadow: 0.5px 0.5px 0.5px lightgrey;
+}
+
+#main-nav {
+  padding-left: 10vw;
+  display: flex;
+  align-content: center;
+  margin-bottom: 5px;
+}
+
+
 
 #main {
   font-size: 42px;
   background-color: hsla(360, 100%, 0%, 0.1);
   display: flex;
+  flex-wrap: wrap;
+  min-height: 85vh;
+}
 
+#footer {
+  min-height: 5vh;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  text-shadow: 0 0 0.5px white;
+  background-image: linear-gradient( hsla(360, 100%, 0%, 0.5), hsla(360, 100%, 0%, 1) );
+}
+
+
+dialog {
+  padding: 0;
+  border: 0;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 1em black;
+}
+
+dialog::backdrop {
+  /* make the backdrop a semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+#input-form {
+  background-color: hsla(360, 0%, 50%, 0.8);
+  margin: 0;
+  padding: 1vw;
+  border: 3px dotted white;
+  border-radius: 10px;
+}
+
+#submit {
+  font-size: 24px;
 }
 
 .wod-tile {
@@ -68,26 +146,6 @@ h2, footer {
   overflow: hidden;
 }
 
-#input-form {
-  background-color: hsla(360, 0%, 50%, 0.8);
-  margin: 50px;
-  padding: 50px;
-  border: 3px dotted white;
-  border-radius: 10px;
-}
-
-#submit {
-  font-size: 24px;
-}
-
-#footer {
-  font-family: 'Raleway', sans-serif;
-  /* background-color: hsla(360, 0%, 0%, 0.8); */
-  background-image: linear-gradient( hsla(360, 100%, 0%, 0.5), hsla(360, 100%, 0%, 1) );
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 20px;
-  margin-top: 50px;
-  margin-left: 0px;
+.tile-list {
+  list-style-image: none;
 }

@@ -3,10 +3,52 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. connect to elements on web page we want to listen to or change
   const inputForm = document.querySelector('#input-form');
 
+  const allButton = document.querySelector('#all-wods');
+  const myButton = document.querySelector('#my-wods');
+  const createButton = document.querySelector('#create');
+  const infoButton = document.querySelector('#info');
+  const blogButton = document.querySelector('#blog');
+
+  const formModal = document.querySelector('#form-modal');
+
   // 2. define event handlers for actions we want to take when we hear events
-  const inputFormHandler = (event) => {
+
+  const modalOutsideClickCloseHandler = (event) => {
+    console.log(event.target);
+    if (event.target === formModal) {
+      formModal.close('cancelled');
+    }
+  }
+
+  const allButtonHandler = (event) => {
+    event.preventDefault();
+    formModal.close();
+    console.log('all button pressed');
+
+  }
+  const myButtonHandler = (event) => {
     event.preventDefault();
 
+    console.log('my button pressed');
+  }
+  const createButtonHandler = (event) => {
+    event.preventDefault();
+    formModal.showModal();
+  }
+  const infoButtonHandler = (event) => {
+    event.preventDefault();
+    formModal.close();
+    console.log('info button pressed');
+  }
+  const blogButtonHandler = (event) => {
+    event.preventDefault();
+    formModal.close();
+
+  }
+
+  const inputFormHandler = (event) => {
+    event.preventDefault();
+    formModal.close();
     // 0. Get info from form
     const name = event.target.name.value;
     const type = event.target.type.value;
@@ -35,6 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // 3. add event listeners to elements we want to listen to
+  formModal.addEventListener('click', modalOutsideClickCloseHandler);
+
+  allButton.addEventListener('click', allButtonHandler);
+  myButton.addEventListener('click', myButtonHandler);
+  createButton.addEventListener('click', createButtonHandler);
+  infoButton.addEventListener('click', infoButtonHandler);
+  blogButton.addEventListener('click', blogButtonHandler);
+
   inputForm.addEventListener('submit', inputFormHandler);
 
 });
@@ -45,17 +95,19 @@ function createNewWODTile(wodObj){
   newWODTile.classList.add('wod-tile');
 
   // create elements within WOD tile and fill with data from wodObj
-  const name = document.createElement('h1');       //input/text
-  const type = document.createElement('h6');         //radio button
-  const scoring = document.createElement('h6');      //radio button
-  const emphasis = document.createElement('h6');     //radio button
-  const exercises = document.createElement('h6');    //text area
-  const rX = document.createElement('h6');           //text area
-  const equipment = document.createElement('h6');    //checkbox[]
-  const scores = document.createElement('h6');       //{date: score}[]
-  const goal = document.createElement('h6')          //input/text
-  const min_time = document.createElement('h6')      //input/time
-  const max_time = document.createElement('h6')      //input/time
+  const name = document.createElement('h3');
+  const tileList = document.createElement('ul');
+  tileList.classList.add('tile-list');
+  const type = document.createElement('li');
+  const scoring = document.createElement('li');
+  const emphasis = document.createElement('li');
+  const exercises = document.createElement('li');
+  const rX = document.createElement('li');
+  const equipment = document.createElement('li');
+  const scores = document.createElement('li');
+  const goal = document.createElement('li')
+  const min_time = document.createElement('li')
+  const max_time = document.createElement('li')
 
   // fill with data from wodObj
   name.textContent = wodObj.name;
@@ -74,17 +126,21 @@ function createNewWODTile(wodObj){
   max_time.textContent = wodObj.max_time;
 
   // append to newWODTile
-  newWODTile.appendChild(title);
-  newWODTile.appendChild(type);
-  newWODTile.appendChild(scoring);
-  newWODTile.appendChild(emphasis);
-  newWODTile.appendChild(exercises);
-  newWODTile.appendChild(rX);
-  newWODTile.appendChild(equipment);
-  newWODTile.appendChild(scores);
-  newWODTile.appendChild(goal);
-  newWODTile.appendChild(min_time);
-  newWODTile.appendChild(max_time);
+  newWODTile.appendChild(name);
+
+  tileList.appendChild(type);
+  tileList.appendChild(scoring);
+  tileList.appendChild(emphasis);
+  tileList.appendChild(exercises);
+  tileList.appendChild(rX);
+  tileList.appendChild(equipment);
+  tileList.appendChild(scores);
+  tileList.appendChild(goal);
+  tileList.appendChild(min_time);
+  tileList.appendChild(max_time);
+
+  newWODTile.appendChild(tileList);
+
 
   return newWODTile;
 }
