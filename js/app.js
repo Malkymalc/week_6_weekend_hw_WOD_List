@@ -38,8 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoButtonHandler = (event) => {
     event.preventDefault();
     formModal.close();
-    console.log('info button pressed');
+
+    const info = document.createElement('article');
+    info.classList = 'info-article';
+    info.innerHTML = `${info_article}`;
+
+    const main = document.querySelector('#main');
+    const firstTile = document.querySelector('#first-tile');
+    main.removeChild(firstTile);
+    main.appendChild( info );
   }
+
   const blogButtonHandler = (event) => {
     event.preventDefault();
     formModal.close();
@@ -68,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. stick info from form into an object
     const wodObj = {name, type, scoring, emphasis, exercises, rX, equipment, scores, goal, min_time, max_time};
     console.log(wodObj);
+
     // 2. use info from form to create new tile
     const newTile = createNewWODTile(wodObj);
 
@@ -149,3 +159,22 @@ function renderTo(whereID, what){
     const target = document.querySelector(`#${whereID}`);
     target.appendChild(what);
 }
+
+const info_article = `
+<h1>WOD List - How To</h1>
+
+  <h2>Quickstart</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ratione, debitis facere itaque vitae doloribus natus accusantium! Quas iusto vero optio ullam nesciunt, ipsam delectus.
+    </p>
+
+  <h2>Other Features</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus nostrum, magnam earum itaque ut nihil perspiciatis suscipit fugit incidunt, fugiat molestiae modi delectus aspernatur.
+    </p>
+
+  <h2>FAQ</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptatibus rerum incidunt itaque iure neque voluptates, molestias ea, facilis id reprehenderit accusantium? Eaque magnam, quibusdam!
+    </p>
+`;

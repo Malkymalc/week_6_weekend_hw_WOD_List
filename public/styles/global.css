@@ -7,6 +7,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+
 }
 
 h1, h2, h3, h4, h5, h6, footer {
@@ -17,7 +18,7 @@ h1, h2, h3, h4, h5, h6, footer {
 h1, h2 {
   margin: 0;
   padding: 0;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   text-shadow: 3px 3px black,
                2px 2px black,
                1px 1px black;
@@ -25,35 +26,53 @@ h1, h2 {
 
 h1 {
   font-size: 40px;
-  font-weight: lighter;
+  font-weight: 200;
   margin-top: 0;
   text-shadow: 0 0 1px white;
-
 }
+
+header h1 {
+  letter-spacing: 0.1vw;
+}
+
+
 h2 {
   font-size: 18px;
   font-weight: lighter;
   margin-left: 10px;
+  margin-top: 2vw;
   text-shadow: 0 0 0.5px white;
+  white-space: nowrap;
+  height: 100%;
+  width: 50%;
+}
 
+header h2 {
+  font-size: 16px;
 }
 
 #header {
-  margin: 0px;
-  padding: 5px;
+  margin-left: 0;
+  padding: 2px;
   height: 10vh;
   position: sticky;
   top: 0px;
   background-image: linear-gradient(hsla(360, 100%, 0%, 1), hsla(360, 100%, 0%, 0.80));
   display: grid;
-  grid-template-columns: 1fr  2fr;
+  grid-template-columns: 3fr  7fr;
+  align-items: center;
+  justify-items: center;
+}
+
+#heading {
+  justify-self: start;
+  padding-left: 2vw;
 }
 
 
 header ul {
-  margin: 0;
-  padding-top: 1vw;
-  padding-left: 1vw;
+  margin: 1vw;
+  padding: 1vw;
   list-style: none;
 }
 li {
@@ -61,10 +80,11 @@ li {
 }
 header li {
   display: inline-block;
-  margin: 1vw;
+  margin-left: 3vw;
   padding: 0.5vw;
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
+  letter-spacing: 0.1vw
 
 }
 
@@ -80,10 +100,12 @@ header a:hover {
 }
 
 #main-nav {
-  padding-left: 10vw;
   display: flex;
   align-content: center;
-  margin-bottom: 5px;
+  justify-content: center;
+  justify-self: end;
+  align-self: center;
+  padding-right: 2vw;
 }
 
 
@@ -104,18 +126,20 @@ header a:hover {
   font-weight: lighter;
   text-shadow: 0 0 0.5px white;
   background-image: linear-gradient( hsla(360, 100%, 0%, 0.5), hsla(360, 100%, 0%, 1) );
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
+  /* bottom: 0; */
 }
 
 
 dialog {
   padding: 0;
-  margin-top: 10vw;
+  margin-top: 1vh;
   margin-bottom: 5vw;
   border: 0;
-  border-radius: 0.6rem;
   box-shadow: 0 0 1em black;
+  top: 1vh;
+  width: 80vw;
 }
 
 dialog::backdrop {
@@ -176,9 +200,9 @@ dialog::backdrop {
   cursor: pointer;
   font-weight: bold;
   padding: 5px 20px;
-  border: 1px solid black;
-  margin-left: -2px;
-  margin-right: -2px;
+  border: 2px solid grey;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 .radio-group label:first-of-type {
   border-top-left-radius: 7px;
@@ -187,13 +211,17 @@ dialog::backdrop {
 .radio-group label:last-of-type {
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
-  margin-left: -3px;
 }
 
 .radio-group label:hover {
-  background-color: green;
+  background-color: hsl(329, 70%, 86%);
 }
 
 .radio-group input:checked + label{
-  background: red;
+  background: hsl(330, 91%, 67%);
+}
+
+.info-article {
+  background: hsla(360, 100%, 0%, 0.5);
+  color: hsla(360, 90%, 100%, 1);
 }
