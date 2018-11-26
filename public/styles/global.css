@@ -225,3 +225,15 @@ dialog::backdrop {
   background: hsla(360, 100%, 0%, 0.5);
   color: hsla(360, 90%, 100%, 1);
 }
+
+.info-article h1, h2 {
+  font-size: 36px;
+  margin: 3vw;
+  padding: 0;
+}
+
+.info-article p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
