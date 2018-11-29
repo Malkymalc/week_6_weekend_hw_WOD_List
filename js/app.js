@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const info = document.createElement('article');
     info.classList = 'info-article';
-    info.innerHTML = `${info_article}`;
+    info.innerHTML = info_article;
 
     const main = document.querySelector('#main');
     const firstTile = document.querySelector('#first-tile');
@@ -162,19 +162,36 @@ function renderTo(whereID, what){
 
 const info_article = `
 <h1>WOD List - How To</h1>
+<h2>Quickstart</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ratione, debitis facere itaque vitae doloribus natus accusantium! Quas iusto vero optio ullam nesciunt, ipsam delectus.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptatibus rerum incidunt itaque iure neque voluptates, molestias ea, facilis id reprehenderit accusantium? Eaque magnam, quibusdam!
+</p>
 
-  <h2>Quickstart</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ratione, debitis facere itaque vitae doloribus natus accusantium! Quas iusto vero optio ullam nesciunt, ipsam delectus.
-    </p>
+<h2>Other Features</h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus nostrum, magnam earum itaque ut nihil perspiciatis suscipit fugit incidunt, fugiat molestiae modi delectus aspernatur.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus nostrum, magnam earum itaque ut nihil perspiciatis suscipit fugit incidunt, fugiat molestiae modi delectus aspernatur.
+</p>
 
-  <h2>Other Features</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione minus nostrum, magnam earum itaque ut nihil perspiciatis suscipit fugit incidunt, fugiat molestiae modi delectus aspernatur.
-    </p>
+<h2>FAQ</h2>
 
-  <h2>FAQ</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptatibus rerum incidunt itaque iure neque voluptates, molestias ea, facilis id reprehenderit accusantium? Eaque magnam, quibusdam!
-    </p>
+  <details>
+    <summary>Lorem ipsum dolor sit amet.</summary>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo officiis accusamus veritatis, provident quis, minus dolor, odio assumenda eius eligendi cum. Id, molestiae, consectetur.
+  </details>
+
+  <details>
+    <summary>Expedita cupiditate neque amet voluptatem.</summary>
+      Maiores magni, culpa soluta consectetur error libero praesentium eum accusantium, reprehenderit commodi cupiditate quidem vitae autem vero, assumenda harum, vel odio eaque! Vitae enim, qui.
+  </details>
+
+  <details>
+    <summary>Esse vel consequuntur rerum, ratione?  </summary>
+      Adipisci assumenda, laborum quaerat sunt quis ut, quia id impedit tenetur dolorem. Praesentium, minima doloremque explicabo ratione odit enim asperiores, iste similique non quia quasi!
+  </details>
 `;

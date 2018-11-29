@@ -116,6 +116,7 @@ header a:hover {
   display: flex;
   flex-wrap: wrap;
   min-height: 85vh;
+  height: auto;
 }
 
 #footer {
@@ -221,19 +222,74 @@ dialog::backdrop {
   background: hsl(330, 91%, 67%);
 }
 
+
+
 .info-article {
   background: hsla(360, 100%, 0%, 0.5);
-  color: hsla(360, 90%, 100%, 1);
+  color: hsla(360, 70%, 100%, 0.9);
+  height: 200vh;
 }
 
-.info-article h1, h2 {
-  font-size: 36px;
-  margin: 3vw;
-  padding: 0;
-}
-
-.info-article p {
-  font-size: 16px;
+.info-article {
   margin: 0;
-  padding: 0;
+  padding: 5vw;
+  padding-top: 1vh;
+  height: auto;
+}
+
+.info-article h1 {
+  margin-top: 3vh;
+  margin-bottom: -1vh;
+  font-size: 36px;
+  line-height: 1.5;
+  height: auto;
+}
+.info-article h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-left: 0;
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+  height: auto;
+}
+
+.info-article p, details, summary {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 1.5;
+  margin-bottom: 3vh;
+  list-style-type: none;
+}
+
+details, summary {
+  line-height: 1.5;
+  margin-bottom: 3vh;
+  list-style-type: none;
+}
+summary::-webkit-details-marker {
+  color: transparent;
+  font-weight: bold;
+}
+
+summary::before {
+  content: 'Q ';
+  font-weight: bold;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary::after{
+  content: ' (Click for answer)';
+  font-weight: lighter;
+}
+
+details {
+  font-size: 14px;
+  margin-left: 3vw;
+}
+
+summary {
+  margin-left: -3vw;
 }
